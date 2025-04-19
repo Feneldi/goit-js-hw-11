@@ -1,55 +1,35 @@
-ul,
-ol {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-.timer {
+.gallery {
   display: flex;
-  text-align: center;
-  column-gap: 40px;
-}
-
-.field {
-  display: flex;
-  flex-direction: column;
-  font-weight: 400;
-}
-
-.value {
-  font-size: 40px;
-}
-
-.label {
-  font-size: 16px;
-}
-
-.form {
-  max-width: 333px;
-}
-
-.form input[name='delay'] {
-  margin-top: 8px;
-  width: 333px;
-}
-
-.form fieldset {
-  margin: 16px 0 0;
-  display: flex;
-  height: auto;
+  flex-wrap: wrap;
+  gap: 20px;
   justify-content: center;
-  column-gap: 48px;
+  list-style: none;
+  padding: 0;
+  margin: 20px auto;
+  max-width: 400px;
+  max-height: 200px;
 }
 
-.form fieldset label {
-  display: flex;
-  align-items: center;
-  column-gap: 8px;
+.loader {
+  display: none;
+  width: 50px;
+  height: 50px;
+  margin: 20px auto;
+  border: 5px solid #f4e800;
+  border-top: 5px solid #3498db;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
 }
 
-.form button[type='submit'] {
-  margin-top: 24px;
-  background: #4e75ff;
-  color: #fff;
+.loader.visible {
+  display: block;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
